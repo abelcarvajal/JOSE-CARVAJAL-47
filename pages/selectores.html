@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectores</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/CreativeSystemLogoNoBGpng.png" alt="logo" width="30" height="24"
+                        class="d-inline-block align-text-top" />
+                    Creative Systems
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-nav">Selectores</div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center justify-content-center">
+            <div class="col">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true">
+                            Calculadora
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false">
+                            Descuento
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content d-flex justify-content-center" id="tabCalculadora">
+                    <div class="tab-pane fade show active col-4 grid gap-2 justify-content-center" id="home-tab-pane"
+                        role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        Aquí va la calculadora
+                        <div class="container border border-5 border-secondary rounded-3 bg-dark pb-3 mt-4">
+                            
+                            <div class="row mt-2">
+                                <div class="col-12 align-self-center ">
+                                    <input type="text" placeholder="0" class="form-control border border-4 border-secondary" id="pantalla">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="d-grid col-6">
+                                    <button type="button" class="btn btn-secondary btn" id="botonClear" value="C">C</button>
+                                </div>
+                                <div class="d-grid col-6">
+                                    <button type="button" class="btn btn-secondary" id="retroceso">&#9003</button>
+                                </div>
+                            </div>
+
+
+                            <div class="row justify-content-center mt-2">
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton7" value="7">7</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)"type="button" class="btn btn-secondary btn-lg" id="boton8" value="8">8</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton9" value="9">9</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button type="button" class="btn btn-secondary btn-lg" id="boton/" value="/">&#247</button>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-2">
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton4" value="4">4</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton5" value="5">5</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton6" value="6">6</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button type="button" class="btn btn-secondary btn-lg" id="botonx" value="x">x</button>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-2">
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton1" value="1">1</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton2" value="2">2</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton3" value="3">3</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button type="button" class="btn btn-secondary btn-lg" id="boton+" value="+">+</button>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-2">
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton0" value="0">0</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button onclick="boton(value)" type="button" class="btn btn-secondary btn-lg" id="boton." value=".">.</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button type="button" class="btn btn-secondary btn-lg" id="boton=" value="=">=</button>
+                                </div>
+                                <div class="d-grid col-3">
+                                    <button type="button" class="btn btn-secondary btn-lg" id="boton-" value="-">-</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            Aquí debo calcular el descuento
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/logica.js"></script>
+</body>
+
+</html>
