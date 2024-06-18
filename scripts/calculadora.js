@@ -28,7 +28,7 @@ function retroceso(){
 function suma() {
     operacion = "+"
     numero = parseFloat(numero) + parseFloat(valorPantalla)
-    console.log(`numero en suma() ${numero}`)
+    //console.log(`numero en suma() ${numero}`)
     //valorPantalla = numero
     limpiarPantalla()
 
@@ -80,7 +80,6 @@ function igual() {
     if (operacion == "+") {
         numero = parseFloat(numero) + parseFloat(valorPantalla)
         document.getElementById("pantalla").value = numero
-        console.log(`numero en igual() if(+) ${numero}`)
         valorPantalla = 0
     } else if (operacion == "-") {
         numero = parseFloat(numero) - parseFloat(valorPantalla)
@@ -97,4 +96,20 @@ function igual() {
         valorPantalla = 0
     }
 
+}
+
+let precio = 0
+let descuento = 0
+function capturaValores(){
+    console.log("Inicia captura valores")
+    precio = document.getElementById("precio").value
+    descuento = document.getElementById("descuento").value
+}
+
+function calculaDescuento(){
+    capturaValores();
+    valorDescuento = (parseFloat(precio) * parseFloat(descuento)) / 100;
+    precioFinal = precio - valorDescuento;
+    document.getElementById("valor_descuento").value = valorDescuento
+    document.getElementById("precio_final").value = precioFinal
 }

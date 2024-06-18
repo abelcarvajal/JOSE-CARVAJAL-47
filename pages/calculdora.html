@@ -64,7 +64,7 @@
           </li>
         </ul>
         <div class="tab-content d-flex justify-content-center" id="tabCalculadora">
-          <div class="tab-pane fade show active col-4 grid gap-2 justify-content-center" id="home-tab-pane"
+          <div class="tab-pane fade show active col-4 grid gap-2 justify-content-center mt-5" id="home-tab-pane"
             role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
             <div class="container border border-5 border-secondary rounded-3 bg-dark pb-3 mt-4">
@@ -164,9 +164,48 @@
 
             </div>
           </div>
-          <div class="tab-pane fade justify-content-center" id="profile-tab-pane" role="tabpanel"
+          <div class="tab-pane fade justify-content-center mt-5 pt-3 pb-3 border border-2 rounded-3 bg-light " id="profile-tab-pane" role="tabpanel"
             aria-labelledby="profile-tab" tabindex="0">
-            Aquí debo calcular el descuento
+            <div class="container-fluid">
+              <div class="row">
+                <form class="col-6">
+                  <div class="row g-3 align-items-center mx-auto">
+                    <div class="col-3">
+                      <label for="precio" class="col-form-label">Precio $</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="number" id="precio" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center mt-2">
+                    <div class="col-3">
+                      <label for="descuento" class="col-form-label">Descuento</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="number" id="descuento" class="form-control">
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mt-3">
+                    <button onclick="calculaDescuento()" class="btn btn-secondary" type="button">Calcular
+                      descuento</button>
+                  </div>
+                </form>
+                <div class="col-6 text-bg-secondary rounded-3">
+                  <div class="row g-3">
+                    <label class="form-label">Precio con descuento aplicado</label>
+                    <div class="form-text">
+                      <input class="form-control" id="precio_final" type="h3" readonly>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <label for="valor_descuento" class="form-label">Total descuento</label>
+                    <div class="form-text">
+                      <input class="form-control" id="valor_descuento" type="h3" readonly>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -174,6 +213,8 @@
     </div>
   </div>
   <script src="../scripts/calculadora.js"></script>
+  <!--<script src="../scripts/descuento.js"></script>
+  -->
 </body>
 
 </html>
